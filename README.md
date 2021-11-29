@@ -18,6 +18,8 @@ setup
 
 run
 
+### npm
+
 ```bash
 > npm run start
 ```
