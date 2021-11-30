@@ -1,6 +1,10 @@
-const Success = ({ email = 'Email.' }) => {
+const Success = ({ emails = [] }) => {
+	const handleBack = () => {
+		// TODO เมื่อกดปุ่ม Back
+	}
+
 	return (
-		<div className="bg-white p-6  md:mx-auto">
+		<div className="bg-white w-96 p-6 md:mx-auto">
 			<svg className="text-green-600 w-16 h-16 mx-auto my-6" viewBox="0 0 24 24">
 				<path
 					fill="currentColor"
@@ -8,11 +12,16 @@ const Success = ({ email = 'Email.' }) => {
 				></path>
 			</svg>
 			<div className="text-center">
-				<h3 className="md:text-2xl text-base text-gray-900 font-semibold text-center">Hello! {email}</h3>
-				<p class="text-gray-600 my-2">Thank you for subscribe</p>
+				<h3 className="md:text-2xl text-base text-gray-900 font-semibold text-center">Hello!</h3>
+
+				<p className="my-3 flex flex-wrap justify-center -m-1">
+					{/* Loop email*/}
+				</p>
+
+				<p className="text-gray-600 my-2">Thank you for subscribe</p>
 				<p> ^^  </p>
-				<div class="py-10 text-center">
-					<button className="px-12 bg-green-600 hover:bg-indigo-500 text-white font-semibold py-3">
+				<div className="py-10 text-center">
+					<button onClick={handleBack} className="px-12 bg-green-600 hover:bg-indigo-500 text-white font-semibold py-3">
 						GO BACK
 					</button>
 				</div>
